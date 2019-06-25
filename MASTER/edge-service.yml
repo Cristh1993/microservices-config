@@ -1,0 +1,17 @@
+server:
+    port: 8770
+    
+zuul:
+  #ignoredServices: '*'
+  routes:
+    greetings:
+      path: /greeting/**
+      serviceId: GREETING-CLIENT-SERVICE
+      #GREETING-SERVICE
+      stripPrefix: false
+      #url: http://localhost:2222/greeting/
+ 
+eureka:
+    client:
+        serviceUrl:
+             defaultZone: http://localhost:8761/eureka/
