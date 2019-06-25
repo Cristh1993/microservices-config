@@ -1,0 +1,83 @@
+Metodologia y Gobierno para el Ciclo de desarrollo de servicios
+Introduccion
+Servicios y Capacidades
+Capas de Servicios
+
+
+Agile, Servicios y Devops
+Servicios --> Representan un contexto funcional
+granularidad gruesa --> Gran Responsabilidad - Tienen gran responsabilidad pero solo realiza una tarea
+granularidad fina ---> Responsabilidad baja
+Entidad -->Granularidad Gruesa - Logica reutilizable del negocio
+Utilidad -->Granularidad Gruesa - Logica reutilizable del negocio
+
+Capacidades Es el metodo que realiza el servicio
+Cada servicio es autonomo
+Un Microservicio puede manejar hasta maximo dos metodos
+Se construye con alta autonomia
+
+Arquitectura basada en Servicios y Microservicios
+Roles y Responsabilidades
+Analista de Servicios
+Arquitecto de Servicios
+Desarrollador de Servicios
+Custodio de Servicios
+Probador de Servicios
+Gestor Devops
+
+Agile
+ Product Owner
+ Facilitador
+ Team
+ 
+ Fases
+ Planeacion del Sprint
+ Reunion Diaria
+ Ejecucion del Sprint
+ Revision del Sprint
+ Retrospectiva del Sprint
+ 
+ Analisis
+ Diseño
+ Desarrollo
+ Calidad
+ Despliegue
+ Monitoreo
+ Gobierno
+ 
+ 
+ Bajar TULEAP para comparaar
+ 
+Promover la reutilizacion de los servicios y Microservicios con sus capacidades
+
+Todos las acciones que estan fuera de un CRUD van dentro de un servicio de Tarea(Logica de Negocio)
+
+Recurso del Servicio
+Servicio                           Recurso
+ -AgenciaES						/agencia/v1
+Capacidades						   Recurso
+ -CrearAgencia					POST /agencia/s1
+ -ActualizarAgencia				PUT	 /agencia/s1
+ -ConsultarAgenciaPorId			GET	/agencia/s1/{id}
+ 
+Se puede extraer una capacidad de un servicio de entidad y se lo puede llevar a Microservicio especializandolo no agnostico
+Entre mas fina sea la granularidad del servicio mas compleja va a ser la arquitectura
+ 
+ Matriz de Dependencia de Servicio
+ 
+ Crear un excel que tenga los servicios con sus dependencias
+ DevOps
+ DEV-QA-Operations
+ 
+ Automatiza la fase del ciclo de vida del servicio
+Fase
+Develop
+Build
+Integrate
+Test
+Release
+Deploy
+Operate
+
+Profundizar la Metodologia en el Analisis
+Planes de Competencias en Kubernates y Jenkins
