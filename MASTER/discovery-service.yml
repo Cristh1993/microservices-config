@@ -1,3 +1,6 @@
+spring:
+    zipkin:
+        base-url: http://localhost:9411/
 # Defines the Eureka server that is used by the Netflix OSS components to use as the registry
 # for server discovery
 eureka:
