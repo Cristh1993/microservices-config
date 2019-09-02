@@ -8,13 +8,21 @@ server:
 zuul:
   #ignoredServices: '*'
   routes:
+    greetingsclient:
+      path: /greetingclient/**
+      serviceId: GREETING-CLIENT-SERVICE
+      stripPrefix: false
     greetings:
       path: /greeting/**
-      serviceId: GREETING-CLIENT-SERVICE
-      #GREETING-SERVICE
+      serviceId: GREETING-SERVICE
       stripPrefix: false
-      #url: http://localhost:2222/greeting/
- 
+      
+endpoints:
+  routes:
+    sensitive: false
+  trace:
+    sensitive: false
+    
 eureka:
     client:
         serviceUrl:
